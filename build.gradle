@@ -1,4 +1,18 @@
+buildscript {
+    ext {
+        springVersion = '5.0.9.RELEASE'
+        springBootVersion = '2.0.5.RELEASE'
+    }
+    repositories {
+        mavenCentral()
+    }
+    dependencies {
+        classpath("org.springframework.boot:spring-boot-gradle-plugin:${springBootVersion}")
+    }
+}
+
 apply plugin: 'java'
+apply plugin: 'org.springframework.boot'
 
 group 'com.meldmy'
 version '1.0-SNAPSHOT'
@@ -11,5 +25,9 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    compile "org.springframework.boot:spring-boot-starter-aop:${springBootVersion}"
+    compile "org.springframework:spring-aspects:${springVersion}"
+    compile "org.springframework:spring-instrument:${springVersion}"
+    compile 'org.aspectj:aspectjweaver:1.9.1'
+
 }
