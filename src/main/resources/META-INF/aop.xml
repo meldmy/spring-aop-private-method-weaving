@@ -1,0 +1,14 @@
+<!DOCTYPE aspectj PUBLIC
+    "-//AspectJ//DTD//EN" "http://www.eclipse.org/aspectj/dtd/aspectj.dtd">
+<aspectj>
+    <weaver>
+        <!-- only weave classes in this package -->
+        <include within="com.meldmy.sample.some_logic.*"/>
+        <include within="com.meldmy.sample.aspects.*"/>
+        <include within="com.meldmy.sample.config.*"/>
+    </weaver>
+    <aspects>
+        <!-- use only this aspect for weaving -->
+        <aspect name="com.meldmy.sample.aspects.LoggerPrivateMethodAspect"/>
+    </aspects>
+</aspectj>
