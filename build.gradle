@@ -29,5 +29,4 @@ dependencies {
     compile "org.springframework:spring-aspects:${springVersion}"
     compile "org.springframework:spring-instrument:${springVersion}"
     compile 'org.aspectj:aspectjweaver:1.9.1'
-
 }
