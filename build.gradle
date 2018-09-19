@@ -1,0 +1,15 @@
+apply plugin: 'java'
+
+group 'com.meldmy'
+version '1.0-SNAPSHOT'
+
+wrapper.gradleVersion = '4.10.1'
+sourceCompatibility = 1.8
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile 'junit:junit:4.12'
+}
